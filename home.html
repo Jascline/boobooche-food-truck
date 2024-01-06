@@ -1,0 +1,150 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <title>Boobooche Food Truck</title>
+
+    <style>
+        .image-container img {
+            width: 100%; /* Adjust as needed */
+            max-height: 1000px; /* Adjust as needed */
+            object-fit: cover;
+            margin-bottom: 10px; /* Optional: Add some spacing between images */
+        }
+    </style>
+</head>
+
+<body>
+    <header class="head">
+        <h1 class="logo">Food
+            <i class=" fas fa-truck"></i>Truck</h1>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="service.html">Service</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="btn" onclick="location.href='login.html';">Order Online</button>
+        <div id="menu-bar"><i class="fas fa-bars"></i></div>
+    </header>
+    <a href="#home">
+        <div id="scroll"><i class="fas fa-angle-up"></i></div>
+    </a>
+    <!------------------------home section----------------------------->
+    <section id="home" class="home">
+        <div class="image-container">
+            <img src="https://images.wallpaperscraft.com/image/single/pancakes_raspberries_syrup_115255_3840x2400.jpg" alt="Home Image 1">
+            <img src="https://images.wallpaperscraft.com/image/single/coffee_cup_foam_131921_1280x720.jpg" alt="Home Image 2">
+            <img src="https://images.wallpaperscraft.com/image/single/cupcakes_cream_dessert_1073494_1280x720.jpg" alt="Home Image 3">
+        </div>
+    </section>
+         
+    <!------------------About---------------------------->
+    <section class="about">
+        <div class="container">
+            <div class="heading">
+                <button class="btn">Learn More</button>
+                <h2>Our Story</h2>
+                <h1>Boobooche Food Truck</h1>
+            </div>
+            <div class="content">
+                <p>At BooBooChe Food Truck, we are dedicated to serving you the most delicious and mouthwatering food right from our truck. Our team is passionate about food and committed to delivering an exceptional culinary experience to our customers.</p>
+                <p>From savory to sweet, we have a wide range of delectable items on our menu that will satisfy your taste buds. We take pride in using the finest, freshest ingredients to create our culinary delights.</p>
+                <p>Visit us today to enjoy a unique dining experience on wheels!</p>
+            </div>
+            <div class="image">
+                <img src="im1.jpg" alt="">
+                <img src="im2.jpg" alt="">
+                <img src="im3.jpg" alt="">
+                <img src="im4.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------------Dishes Section--------------------------->
+    <section class="menu">
+        <img src="im.png" alt="">
+        <h1>Check Our Newest Dishes</h1>
+        <table>
+            <tr>
+                <td rowspan="3"><img src="im1.jpg" width="100%" height="120%">
+                    <span>Ricotta-Stuffed French Toast </span>
+                    <p>RICOTTA CHEESE, CHALLAH BREAD, FRESH BERRIES, HEAVY CREAM</p>
+                </td>
+                <td><img src="im2.jpg">
+                    <br>
+                    <span>Chicken Zinger Burger </span>
+                    <p> CHEESE, CHALLAH BREAD, FRESH BERRIES, HEAVY CREAM</p>
+                    <br><br>
+                </td>
+            </tr>
+            <tr>
+
+                <td rowspan="2"><img src="im3.jpg">
+                    <br>
+                    <span>Mexican Tacos - </span>
+                    <p>RICOTTA CHEESE, CHALLAH BREAD, FRESH BERRIES, HEAVY CREAM</p>
+                </td>
+            </tr>
+
+        </table>
+        </div>
+    </section>
+</body>
+<script>
+    let menu = document.querySelector('#menu-bar');
+    let head = document.querySelector('.head .navbar');
+
+    menu.onclick = () => {
+        head.classList.toggle('active');
+    };
+
+    window.onscroll = () => {
+        head.classList.remove('active');
+        if (window.scrollY > 60) {
+            document.querySelector('#scroll').classList.add('active');
+        } else {
+            document.querySelector('#scroll').classList.remove('active');
+        }
+    };
+
+    var swiper = new Swiper(".home-slider", {
+        loop: true,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+    <!---------Footer----->
+<section class="footer">
+
+    <h3>About Us</h3>
+  <p>This food truck has a large, thriving social media audience across all the major social networks,<br> 
+    
+    <h3>Still having any query?</h3>
+    <p>Drop us a line on</p>
+    <p>Email: <a href="mailto:info@booboche.com">info@booboche.com</a></p>
+    <div class="rec">
+        <p>Made with <i class="fa fa-heart-o"></i> by Admin of Boobooche food truck official</p>
+    </div>
+</section>
+
+
+</html>

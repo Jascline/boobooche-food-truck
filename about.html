@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-bAdZEQomWZVoFqDFF1iX7EzA7pDB2J5NHdTvsILq56jMVJq8o/tvBXe2+dwAd/Yir4pVSydg0+AlxR4dul8qatw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <title>Boobooche Foof</title>
+</head>
+
+<body>
+    <header class="head">
+        <h1 class="logo">Food
+            <i class=" fas fa-truck"></i>Truck</h1>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="service.html">Service</a>
+            <a href="index1.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="btn">Order Online</button>
+        <div id="menu-bar"><i class="fas fa-bars"></i></div>
+    </header>
+      <a onClick="window.scroll({ top: 0,left: 0,behavior: 'smooth' });" >
+        
+        <div id="scroll"><i class="fas fa-angle-up"></i></div>
+    </a>
+    <!--------------------- contact us ----------------------------->
+<section class="subabout-header">
+    <h1>About Us</h1>
+</section>
+
+<section>
+    <h1 style="font-size: 40px;">Get to know us!</h1>
+    <p style="padding-top: 25px; font-size: 24px;">
+        -At BooBooChe Food Truck, we are dedicated to serving you the most delicious and mouthwatering food right from our truck. Our team is passionate about food and committed to delivering an exceptional culinary experience to our customers.
+    </p>
+    <p style="font-size: 24px;">
+        -From savory to sweet, we have a wide range of delectable items on our menu that will satisfy your taste buds. We take pride in using the finest, freshest ingredients to create our culinary delights.
+    </p>
+    <p style="font-size: 24px;">
+        -Visit us today to enjoy a unique dining experience on wheels!
+    </p>
+    <br><br>
+</section>
+
+</section>
+<section class="menu">
+        <img src="im.png" alt="">
+        <div class="container">
+            <div class="inner-container">
+                <img src="https://recipesblob.oetker.com.my/assets/b4a560e4557945e39d0c2876cc80a169/750x910/the-classic-pancake.jpg" alt="">
+            </div>
+            <div class="inner-container">
+                <img src="https://www.jocooks.com/wp-content/uploads/2020/08/ground-beef-tacos-1-11.jpg" alt="">
+            </div>
+            <div class="inner-container">
+                <img src="https://www.indianveggiedelight.com/wp-content/uploads/2022/08/vegetable-mayonnaise-sandwich.jpg" alt="">
+            </div>
+        </div>
+        </div>
+    </section>
+
+<script>
+    let menu = document.querySelector('#menu-bar');
+    let head = document.querySelector('.head .navbar');
+
+    menu.onclick = () => {
+        head.classList.toggle('active');
+    };
+
+    window.onscroll = () => {
+        head.classList.remove('active');
+        if (window.scrollY > 60) {
+            document.querySelector('#scroll').classList.add('active');
+        } else {
+            document.querySelector('#scroll').classList.remove('active');
+        }
+    };
+
+    var swiper = new Swiper(".home-slider", {
+        loop: true,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+        <!---------Footer----->
+<section class="footer">
+
+    <h3>Still having any query?</h3>
+    <p>Drop us a line on</p>
+    <p>Email: <a href="mailto:info@booboche.com">info@booboche.com</a></p>
+    <div class="rec">
+        <p>Made with <i class="fa fa-heart-o"></i> by Admin of Boobooche food truck official</p>
+    </div>
+
+</body>
+</html>

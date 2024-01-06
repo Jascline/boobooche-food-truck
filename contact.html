@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <title>Crafty Grill</title>
+</head>
+
+<body>
+    <header class="head">
+        <h1 class="logo">Food
+            <i class=" fas fa-truck"></i>Truck</h1>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="service.html">Service</a>
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <button class="btn" onclick="location.href='login.html';">Order Online</button>
+        <div id="menu-bar"><i class="fas fa-bars"></i></div>
+    </header>
+   
+    <a onClick="window.scroll({ top: 0,left: 0,behavior: 'smooth' });" >
+        
+        <div id="scroll"><i class="fas fa-angle-up"></i></div>
+    </a>
+
+    <!--------------------- contact us ----------------------------->
+<section class="sub-header">
+    <h1>Contact Us</h1>
+</section>
+
+<section class="location">
+    <iframe src="https://www.google.com/maps/d/embed?mid=1Cz-kixhZDP5rMWtQt0tF0Aucxk0&hl=en&ehbc=2E312F" width="640" height="480"></iframe>
+
+
+
+</section>
+<section class="contact-us">
+    <div class="row">
+        <div class="contact-col">
+            <div>
+                <i class="fa fa-home"></i>
+                <span>
+                    <h5>Jalan Bukit, Taman Bukit Mewah</h5>
+                    <p>43000 Kajang, Selangor,Malaysia</p>
+                </span>
+            </div>
+             <div>
+                <i class="fa fa-phone"></i>
+                <span>
+                    <h5>0169994567</h5>
+                    <p>Monday to Saturday, 10AM to 6PM</p>
+                </span>
+            </div>
+             <div>
+                <i class="fa fa-envelope-o"></i>
+                <span>
+                    <h5>boobooche@gmail.com</h5>
+                    <p>Email us your query</p>
+                </span>
+            </div>
+        </div>
+<div class="contact-col">
+
+     <form action="https://formspree.io/f/xeqnrokk" method="POST">
+        <input type="text" name="name" placeholder="Enter your name" required>
+        <input type="email" name="email" placeholder="Enter email address" required>
+        <input type="text" name="subject" placeholder="Enter your subject" required>
+        <textarea rows="8" name="message" placeholder="Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+
+
+    </div>
+</section>
+<script>
+    let menu = document.querySelector('#menu-bar');
+    let head = document.querySelector('.head .navbar');
+
+    menu.onclick = () => {
+        head.classList.toggle('active');
+    };
+
+    window.onscroll = () => {
+        head.classList.remove('active');
+        if (window.scrollY > 60) {
+            document.querySelector('#scroll').classList.add('active');
+        } else {
+            document.querySelector('#scroll').classList.remove('active');
+        }
+    };
+
+    var swiper = new Swiper(".home-slider", {
+        loop: true,
+        spaceBetween: 20,
+        autoplay: {
+            delay: 5000,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            type: "progressbar",
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+        <!---------Footer----->
+<section class="footer">
+
+   
+    <h3>Still having any query?</h3>
+    <p>Drop us a line on</p>
+    <p>Email: <a href="mailto:info@booboche.com">info@booboche.com</a></p>
+    <div class="rec">
+        <p>Made with <i class="fa fa-heart-o"></i> by Admin of Boobooche food truck official</p>
+    </div>
+</section>
+
+
+</html>
